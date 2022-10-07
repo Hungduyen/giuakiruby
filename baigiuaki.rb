@@ -144,7 +144,7 @@ class QLPTGT
           $congans225.delete_if {|pt225| pt225.id225 == maid225}
           puts "===Danh sach phuong tien sau khi xoa==="    
           $congans225.each do |pt|
-              puts pt.display
+              puts pt.info
           end
       end
       
@@ -154,6 +154,7 @@ class QLPTGT
             puts congan225.info
         end
     end
+    
 
 end
 
@@ -178,7 +179,7 @@ while $continute
     when 2
       quanly.deletePhuongTien225
     when 3
-         puts "Hiện đang bị lỗi"
+         puts "Đang bị lỗi"
     when 4
           quanly.thongtin
     else
