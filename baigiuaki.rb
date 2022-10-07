@@ -140,10 +140,10 @@ class QLPTGT
 
     def deletePhuongTien225
           puts "Nhap ID phuong tien can xoa: "
-          id225 = gets.chomp
-          $phuongtiens225.delete_if {|pt225| pt225.id225 == id225}
+          maid225 = gets.chomp
+          $congans225.delete_if {|pt225| pt225.id225 == maid225}
           puts "===Danh sach phuong tien sau khi xoa==="    
-          $phuongtiens225.each do |pt|
+          $congans225.each do |pt|
               puts pt.display
           end
       end
@@ -164,9 +164,9 @@ while $continute
 
     quanly = QLPTGT.new
     puts "1. Thêm mới phương tiện."
-    puts "2. Tìm kiếm theo tên."
-    puts "3. Hiện thị thông tin danh sách phương tiện ."
-    puts "4. Xóa phương tiện"
+    puts "2. Xóa phương tiện"
+    puts "3. Tìm kiếm theo tên."
+    puts "4. Hiện thị thông tin danh sách phương tiện ."
     puts "5 Thoát khỏi chương trình."
 
     print "Mời bạn chọn : "
@@ -176,11 +176,11 @@ while $continute
     when 1
         quanly.themPhuongtien
     when 2
-       puts "Hiện đang bị lỗi"
-    when 3
-        quanly.thongtin
-    when 4
       quanly.deletePhuongTien225
+    when 3
+         puts "Hiện đang bị lỗi"
+    when 4
+          quanly.thongtin
     else
        puts "Xin tạm biệt!"
         $continute = false
